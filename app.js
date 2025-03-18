@@ -20,7 +20,7 @@ function agregarAmigo(){
 function actualizarListaAmigos(nombreAmigo){
     //ulListaAmigos.innerHTML = "";
     //for(i=0; i < listaNombresAmigos.length;i++){
-    ulListaAmigos.innerHTML += `<li>${nombreAmigo}</li>`;
+    ulListaAmigos.innerHTML += `<li  class="itemListaAmigo"><img class="icoAmigoItem" src="assets/amigoSecreto.jpeg" alt="IconoAmigoSecreto">${nombreAmigo}</li>`;
     listaNombresAmigos.push(nombreAmigo);
     //}
 }
@@ -32,6 +32,6 @@ function limpiarLista(){
 
 function sortearAmigo(){
     ulResultado.innerHTML = "";
-    ulResultado.innerHTML = `El amigo sorteado es: ${listaNombresAmigos[Math.floor(Math.random()*listaNombresAmigos.length)]}`;
+    ulResultado.innerHTML = `El amigo sorteado es:<br /> ${listaNombresAmigos[Math.floor(Math.random()*listaNombresAmigos.length)]}`;
 
 }

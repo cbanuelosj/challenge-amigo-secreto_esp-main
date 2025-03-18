@@ -137,9 +137,21 @@ ul {
     margin: 20px 0;
 }
 
+.itemListaAmigo{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    gap: 0.5rem;
+    
+}
+
+.icoAmigoItem{
+    width: 36px;
+    height: 36px;
+}
+
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
