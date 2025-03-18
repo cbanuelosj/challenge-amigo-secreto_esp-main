@@ -11,18 +11,23 @@ function agregarAmigo(){
         alert('Por favor, inserte un nombre de un amigo.');
     }
     else{
-        listaNombresAmigos.push(nombreAmigo);
-        actualizarListaAmigos();
+        actualizarListaAmigos(nombreAmigo);
         cuadroTextoNombreAmigo.value = '';
         cuadroTextoNombreAmigo.focus();
     }
 }
 
-function actualizarListaAmigos(){
-    ulListaAmigos.innerHTML = "";
-    for(i=0; i < listaNombresAmigos.length;i++){
-        ulListaAmigos.innerHTML += `<li>${listaNombresAmigos[i]}</li>`;
-    }
+function actualizarListaAmigos(nombreAmigo){
+    //ulListaAmigos.innerHTML = "";
+    //for(i=0; i < listaNombresAmigos.length;i++){
+    ulListaAmigos.innerHTML += `<li>${nombreAmigo}</li>`;
+    listaNombresAmigos.push(nombreAmigo);
+    //}
+}
+
+function limpiarLista(){
+    ulListaAmigos.innerHTML = '';
+    listaNombresAmigos.length = 0;
 }
 
 function sortearAmigo(){
